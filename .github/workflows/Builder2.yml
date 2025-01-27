@@ -18,7 +18,8 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+#  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/coolsnowwolf/lede/tree/20200915
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -31,8 +32,8 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-18.10
-#    runs-on: ubuntu-20.04
+#    runs-on: ubuntu-18.10
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout
       uses: actions/checkout@main
